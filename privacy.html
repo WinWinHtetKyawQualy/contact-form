@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="Description" content="">
+		<meta name="Keywords" content="">
+		<meta name="format-detection" content="telephone=no">
+		<!-- Google Material icon fonts -->
+		<link rel="stylesheet" href="css/destyle.css">
+		<!-- Bootstrap CSS -->
+			<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- CSS custom -->
+		<link rel="stylesheet" href="css/style.css?p=(new Date()).getFullYear()+(new Date()).getMonth()+(new Date()).getDate()+ (new Date()).getHours()">
+		<!-- Splide CSS -->
+	<title>個人情報の取り扱いについて | 株式会社ハウジングロビー</title>
+	</head>
+<body>
+
+<div class="wrap">
+	<!-- ヘッダ背景イメージ -->
+	<div class="header-img">
+		<img src="img/img-header-general.jpg" alt="">
+	</div><!-- /.heading-img -->
+	<!-- ロゴ、ユーティリティヘッダ -->
+	<div class="heading-wrap">
+		<div class="heading"><!--  container -->
+			<a href="index.html"><svg class="lower-header-logo-xs" viewBox="0 0 283.8 94.6"><use href="img/logo.svg#logo" style="fill:#2B2610;" /></svg>
+			<svg class="lower-header-logo-long" viewBox="0 0 246 31"><use href="img/logo_long.svg#logolong" /></svg></a>
+
+			<ul class="nav-util lower-util" id="NAVUTIL">
+			</ul>
+		</div>
+	</div><!-- /.heading-wrap -->
+	<!-- メインメニュー -->
+	<div class="lower-megamenu-wrap" id="MEGA">
+		<div class="header" id="MEGAMENU">
+		</div><!--/.header-->
+	</div><!-- /.megamenu-wrap-->
+	<!-- スペーサー -->
+	<div class="spacer"></div>
+	<!-- カテゴリーメニュー -->
+	<div class="container cat-menu-wrap">
+		<div class="cat-menu">
+			<div class="cat-menu-tit"><p>個人情報の<br>取り扱いについて <br class="br-xs-none"><span class="en">Privacy Policy</span></p></div>
+			<div class="cat-menu-list-wrap">
+					<ul class="cat-menu-list">
+						<li><a class="sublink disable" href="">個人情報の取り扱いについて</a></li>
+						<!-- <li><a class="sublink" href="">イベント</a></li>
+						<li><a class="sublink" href="">メディア</a></li> -->
+					</ul>
+			</div>
+		</div>
+	</div><!-- /.cat-menu-wrap -->
+	<!-- パンくずリスト -->
+	<div class="inner-controll">
+		<div class="container container-index">
+			<ul class="breadcrumbs">
+				<li><a href="index.html">HOME</a></li>
+				<li>個人情報の取り扱いについて</li>
+			</ul>
+		</div>
+	</div><!-- /.inner-controll -->
+
+	<div class="main-wrap w100 white pt50 pb150">
+		<div class="container container-lower">
+
+			<div class="index-tit-wrap index-tit-wrap-privacy">
+				<div class="index-tit-cat">
+					<p class="en">Privacy Policy</p>
+					<h1 class="ja">個人情報の取り扱いについて</h1>
+				</div>
+			</div><!-- /.tit-wrap -->
+
+
+			<div class="privacy-wrap" id="PRIVACY">
+			</div><!-- /.privacy-wrap -->
+
+
+		</div><!-- /.container -->
+	</div><!-- /.main-wrap.w100.white-->
+
+</div><!-- /.wrap -->
+
+<!-- フッター -->
+<div id="FOOTER" class="footer-wrap">
+</div>
+<!-- /.footer -->
+
+<!-- ページトップボタン -->
+<a href="#top" class="pagetop"></a>
+
+<!--オーバーレイ nav-->
+<nav id="OVERLAY">
+</nav>
+
+<!--共通ハンバーガー-->
+<header class="d-md-none" id="hamburger">
+  <div id="nav_toggle"> <span></span> <span></span> <span></span> </div>
+</header>
+
+    <!-- Optional JavaScript -->
+    <!-- <script src="js/bootstrap.bundle.min.js"></script>popper.js is included in this file -->
+    <!-- GSAP -->
+    <!-- <script src="js/gsap/gsap.min.js" charset="utf-8"></script>
+    <script src="js/gsap/CSSRulePlugin.min.js" charset="utf-8"></script>
+    <script src="js/gsap/ScrollTrigger.min.js" charset="utf-8"></script>
+    <script src="js/ofi.min.js"></script> -->
+		<script src="js/common.js"></script>
+		<script>
+			//NAVUTIL呼び出し
+      fetch("include_nav_util.html")
+      .then(response => {return response.text()})
+      .then(data => {document.getElementById("NAVUTIL").innerHTML = data;});
+
+			//MEGAMENU呼び出し
+      fetch("include_megamenu.html")
+      .then(response => {return response.text()})
+      .then(data => {document.getElementById("MEGAMENU").innerHTML = data;});
+
+			//FOOTER呼び出し
+			fetch("include_footer.html")
+			.then(response => {return response.text()})
+			.then(data => {document.getElementById("FOOTER").innerHTML = data;});
+
+			//OVERLAY呼び出し
+      fetch("include_nav_overlay.html")
+      .then(response => {return response.text()})
+      .then(data => {document.getElementById("OVERLAY").innerHTML = data;});
+
+			//PRIVACY POLICY呼び出し
+      fetch("include_privacy.html")
+      .then(response => {return response.text()})
+      .then(data => {document.getElementById("PRIVACY").innerHTML = data;});
+
+
+		</script>
+
+
+</body>
+</html>
