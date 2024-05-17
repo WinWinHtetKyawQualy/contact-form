@@ -30,7 +30,7 @@ let errorCallTwo = false;
 let postalError = false;
 let addressError = false;
 let telephoneError = false;
-let checkSelect = false;
+
 // Functions
 function checkRadioButtons() {
   var radioButtons = document.querySelectorAll('input[name="choice01"]');
@@ -83,27 +83,29 @@ function checkPhoneNumber() {
 }
 
 // Checking checkbox
+// Object to store error flags for each fieldset
+const errorFlags = {};
 function validateCheckbox(fieldsetId) {
   const fieldset = document.getElementById(fieldsetId);
   const checkboxes = fieldset.querySelectorAll('input[type="checkbox"]');
   let isChecked = false;
-  
+
   checkboxes.forEach((checkbox) => {
     if (checkbox.checked) {
       isChecked = true;
       clearError(fieldset);
-      checkSelect = false;
+      errorFlags[fieldsetId] = false;
     }
   });
 
   if (!isChecked) {
-    if (!checkSelect) {
+     if(!errorFlags[fieldsetId]){
       error(fieldset, "必須項目です。選択をお願いします。");
-      checkSelect = true;
-    }
+      errorFlags[fieldsetId] = true;
+     } 
   } else {
     clearError(fieldset);
-    checkSelect = false;
+    errorFlags[fieldsetId] = false;
   }
 }
 
